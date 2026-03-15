@@ -50,11 +50,8 @@ const Navbar = () => {
       }`}
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
-        <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="White Sapphire Dental Clinic Logo" className="h-10 w-10" />
-          <span className={`font-heading font-bold text-lg hidden sm:block ${scrolled ? "text-foreground" : "text-primary-foreground"}`}>
-            White Sapphire
-          </span>
+        <Link to="/" className="flex items-center">
+          <img src={logo} alt="White Sapphire Dental Clinic Logo" className="h-12 md:h-14 w-auto" />
         </Link>
 
         {/* Desktop Nav */}

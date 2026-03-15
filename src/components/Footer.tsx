@@ -9,9 +9,8 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-10">
           {/* Clinic Info */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <img src={logo} alt="White Sapphire Dental Clinic" className="h-10 w-10" />
-              <span className="font-heading font-bold text-lg">White Sapphire</span>
+            <div className="mb-4">
+              <img src={logo} alt="White Sapphire Dental Clinic" className="h-16 w-auto" />
             </div>
             <p className="text-secondary-foreground/60 text-sm mb-2">Your Smile, Our Priority</p>
             <p className="text-secondary-foreground/50 text-sm leading-relaxed">
