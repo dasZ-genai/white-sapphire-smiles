@@ -26,7 +26,7 @@ const ContactSection = () => {
             className="rounded-xl overflow-hidden shadow-card h-[400px]"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3903.5!2d79.8234!3d11.9234!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5361c7a41753d5%3A0xd9b3e72e0e1f3b8a!2sDr.Karthika&#39;s+White+Sapphire+Dental+Clinic!5e0!3m2!1sen!2sin"
+              src="https://maps.google.com/maps?q=Dr.Karthika's+White+Sapphire+Dental+Clinic+Mudaliyarpet+Pondicherry&t=&z=16&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
