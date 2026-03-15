@@ -34,9 +34,13 @@ const HeroSection = () => {
           <p className="text-primary-foreground/70 text-lg md:text-xl mb-4 max-w-xl">
             Expert dental care with <strong className="text-primary-foreground">Dr. Karthika BDS</strong>, Root Canal Specialist (C.C)
           </p>
-          <p className="text-primary-foreground/50 text-base mb-8">
+          <p className="text-primary-foreground/50 text-base mb-4">
             Modern treatments • Pain-free procedures • Gentle approach
           </p>
+          <a href="tel:+917598000829" className="inline-flex items-center gap-2 text-cyan-glow font-semibold text-lg mb-8 hover:underline">
+            <Phone size={20} />
+            +91 7598 000 829
+          </a>
 
           <div className="flex flex-col sm:flex-row gap-4">
             <Button asChild variant="hero" size="lg" className="text-base px-8">

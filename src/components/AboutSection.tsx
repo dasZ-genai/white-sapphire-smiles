@@ -5,7 +5,7 @@ import doctorImg from "@/assets/doctor.jpg";
 const credentials = [
   { icon: Award, label: "BDS Certified" },
   { icon: Sparkles, label: "Root Canal Specialist (C.C)" },
-  { icon: Zap, label: "5+ Years Experience" },
+  { icon: Zap, label: "10+ Years Experience" },
   { icon: Users, label: "500+ Happy Smiles" },
   { icon: Heart, label: "Modern Equipment" },
 ];
