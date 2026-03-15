@@ -65,7 +65,7 @@ const Footer = () => {
                 <Instagram size={18} />
               </a>
               <a
-                href="https://www.facebook.com/whitesapphiredental"
+                href="https://www.facebook.com/profile.php?id=61577745755577"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-secondary-foreground/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
