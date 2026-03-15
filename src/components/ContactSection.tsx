@@ -12,7 +12,7 @@ const ContactSection = () => {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">Get In Touch</p>
+          <p className="text-copper font-semibold text-sm uppercase tracking-wider mb-2">Get In Touch</p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Visit Us</h2>
           <p className="text-muted-foreground">Conveniently located in Mudaliyarpet, Pondicherry</p>
         </motion.div>
@@ -46,7 +46,7 @@ const ContactSection = () => {
           >
             <div className="flex items-start gap-4">
               <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center shrink-0">
-                <MapPin className="text-primary" size={20} />
+                <MapPin className="text-copper" size={20} />
               </div>
               <div>
                 <h3 className="font-semibold text-foreground mb-1">Address</h3>
@@ -60,11 +60,11 @@ const ContactSection = () => {
 
             <div className="flex items-start gap-4">
               <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center shrink-0">
-                <Phone className="text-primary" size={20} />
+                <Phone className="text-copper" size={20} />
               </div>
               <div>
                 <h3 className="font-semibold text-foreground mb-1">Phone</h3>
-                <a href="tel:+917598000829" className="text-muted-foreground text-sm hover:text-primary transition-colors">
+                <a href="tel:+917598000829" className="text-muted-foreground text-sm hover:text-copper transition-colors">
                   +91 7598 000 829
                 </a>
               </div>
@@ -72,11 +72,11 @@ const ContactSection = () => {
 
             <div className="flex items-start gap-4">
               <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center shrink-0">
-                <Mail className="text-primary" size={20} />
+                <Mail className="text-copper" size={20} />
               </div>
               <div>
                 <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                <a href="mailto:whitesapphiredentalclinic@gmail.com" className="text-muted-foreground text-sm hover:text-primary transition-colors">
+                <a href="mailto:whitesapphiredentalclinic@gmail.com" className="text-muted-foreground text-sm hover:text-copper transition-colors">
                   whitesapphiredentalclinic@gmail.com
                 </a>
               </div>
@@ -84,7 +84,7 @@ const ContactSection = () => {
 
             <div className="flex items-start gap-4">
               <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center shrink-0">
-                <Clock className="text-primary" size={20} />
+                <Clock className="text-copper" size={20} />
               </div>
               <div>
                 <h3 className="font-semibold text-foreground mb-1">Clinic Hours</h3>

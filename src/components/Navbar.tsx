@@ -63,7 +63,7 @@ const Navbar = () => {
                 onClick={() => handleNavClick(link.href)}
                 className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                   scrolled
-                    ? "text-foreground hover:text-primary hover:bg-accent"
+                    ? "text-foreground hover:text-copper hover:bg-accent"
                     : "text-primary-foreground/80 hover:text-primary-foreground"
                 }`}
               >
@@ -75,7 +75,7 @@ const Navbar = () => {
                 to={link.href}
                 className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                   scrolled
-                    ? "text-foreground hover:text-primary hover:bg-accent"
+                    ? "text-foreground hover:text-copper hover:bg-accent"
                     : "text-primary-foreground/80 hover:text-primary-foreground"
                 }`}
               >
@@ -113,7 +113,7 @@ const Navbar = () => {
                 <button
                   key={link.label}
                   onClick={() => handleNavClick(link.href)}
-                  className="px-4 py-3 rounded-lg text-foreground hover:bg-accent hover:text-primary font-medium text-left"
+                  className="px-4 py-3 rounded-lg text-foreground hover:bg-accent hover:text-copper font-medium text-left"
                 >
                   {link.label}
                 </button>
@@ -121,7 +121,7 @@ const Navbar = () => {
                 <Link
                   key={link.label}
                   to={link.href}
-                  className="px-4 py-3 rounded-lg text-foreground hover:bg-accent hover:text-primary font-medium"
+                  className="px-4 py-3 rounded-lg text-foreground hover:bg-accent hover:text-copper font-medium"
                 >
                   {link.label}
                 </Link>

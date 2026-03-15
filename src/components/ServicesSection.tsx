@@ -45,7 +45,7 @@ const ServicesSection = () => {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">What We Offer</p>
+          <p className="text-copper font-semibold text-sm uppercase tracking-wider mb-2">What We Offer</p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Dental Services</h2>
           <p className="text-muted-foreground max-w-lg mx-auto">Comprehensive care for your entire family</p>
         </motion.div>
@@ -58,10 +58,10 @@ const ServicesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="group bg-card rounded-xl p-6 shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-primary/30"
+              className="group bg-card rounded-xl p-6 shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-copper/30"
             >
-              <div className="w-12 h-12 rounded-lg bg-accent flex items-center justify-center mb-4 group-hover:bg-primary/10 transition-colors">
-                <service.icon className="text-primary" size={24} />
+              <div className="w-12 h-12 rounded-lg bg-accent flex items-center justify-center mb-4 group-hover:bg-copper/10 transition-colors">
+                <service.icon className="text-copper" size={24} />
               </div>
               <h3 className="text-lg font-bold text-foreground mb-2">{service.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">{service.description}</p>
@@ -94,7 +94,7 @@ const ServicesSection = () => {
             href="https://wa.me/7598000829?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
+            className="inline-flex items-center gap-2 text-copper font-semibold hover:underline"
           >
             Have questions? Chat with us on WhatsApp →
           </a>

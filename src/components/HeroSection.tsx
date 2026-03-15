@@ -23,7 +23,7 @@ const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-cyan-glow font-semibold text-sm md:text-base tracking-wider uppercase mb-4"
+            className="text-copper font-semibold text-sm md:text-base tracking-wider uppercase mb-4"
           >
             Pondicherry's Trusted Dental Clinic
           </motion.p>
@@ -37,7 +37,7 @@ const HeroSection = () => {
           <p className="text-primary-foreground/50 text-base mb-4">
             Modern treatments • Pain-free procedures • Gentle approach
           </p>
-          <a href="tel:+917598000829" className="inline-flex items-center gap-2 text-cyan-glow font-semibold text-lg mb-8 hover:underline">
+          <a href="tel:+917598000829" className="inline-flex items-center gap-2 text-copper font-semibold text-lg mb-8 hover:underline">
             <Phone size={20} />
             +91 7598 000 829
           </a>
