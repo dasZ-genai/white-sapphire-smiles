@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Stethoscope, Sparkles, SmilePlus, Hospital, Wrench, Baby } from "lucide-react";
+import servicesBanner from "@/assets/services-banner.png";
 
 const services = [
   {
@@ -67,6 +68,21 @@ const ServicesSection = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Services Banner */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-10 rounded-xl overflow-hidden shadow-card"
+        >
+          <img
+            src={servicesBanner}
+            alt="Complete dental services offered at White Sapphire Dental Clinic Pondicherry"
+            className="w-full h-auto object-cover"
+            loading="lazy"
+          />
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0 }}
