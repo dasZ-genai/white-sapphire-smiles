@@ -6,14 +6,15 @@ import clinic2 from "@/assets/clinic-2.jpg";
 import clinic3 from "@/assets/clinic-3.jpg";
 import clinic4 from "@/assets/clinic-4.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
+import interior5 from "@/assets/interior-5.jpg";
 
 const galleryImages = [
-  { src: clinic3, alt: "White Sapphire Dental Clinic exterior in Pondicherry", label: "Clinic Exterior" },
-  { src: clinic1, alt: "Reception area at White Sapphire Dental Clinic", label: "Reception" },
-  { src: clinic2, alt: "Treatment room with modern dental equipment", label: "Treatment Room" },
-  { src: heroBg, alt: "Advanced dental chair and equipment", label: "Dental Equipment" },
-  { src: clinic4, alt: "Sterilization area at White Sapphire Dental Clinic", label: "Sterilization" },
-  { src: clinic1, alt: "Comfortable waiting area for patients", label: "Waiting Area" },
+  { src: clinic1, alt: "White Sapphire Dental Clinic exterior in Pondicherry", label: "Clinic Exterior" },
+  { src: clinic2, alt: "Reception area at White Sapphire Dental Clinic", label: "Reception" },
+  { src: clinic3, alt: "Doctor's consultation desk at White Sapphire Dental", label: "Consultation Room" },
+  { src: clinic4, alt: "Dental treatment chair and equipment", label: "Treatment Room" },
+  { src: heroBg, alt: "Full treatment room with dental chair and consultation desk", label: "Treatment Suite" },
+  { src: interior5, alt: "Advanced dental equipment and instruments", label: "Dental Equipment" },
 ];
 
 const ClinicGallery = () => {
