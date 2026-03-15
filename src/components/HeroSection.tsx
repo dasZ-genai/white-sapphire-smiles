@@ -23,7 +23,7 @@ const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-cyan-glow font-semibold text-sm md:text-base tracking-wider uppercase mb-4"
+            className="text-cyan-glow font-semibold text-base md:text-lg tracking-wider uppercase mb-4"
           >
             Pondicherry's Trusted Dental Clinic
           </motion.p>
