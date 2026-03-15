@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
+import { SectionContainer, SectionItem } from "./SectionReveal";
 import clinic1 from "@/assets/clinic-1.jpg";
 import clinic2 from "@/assets/clinic-2.jpg";
 import clinic3 from "@/assets/clinic-3.jpg";
@@ -23,27 +24,29 @@ const ClinicGallery = () => {
   return (
     <section id="gallery" className="py-20 md:py-28 bg-muted">
       <div className="container">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-14"
-        >
-          <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">Our Space</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Clinic</h2>
-          <p className="text-muted-foreground max-w-lg mx-auto">
-            Modern facility, sterilized environment, comfortable experience
-          </p>
-        </motion.div>
+        <SectionContainer className="text-center mb-14">
+          <SectionItem>
+            <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">Our Space</p>
+          </SectionItem>
+          <SectionItem>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Clinic</h2>
+          </SectionItem>
+          <SectionItem>
+            <p className="text-muted-foreground max-w-lg mx-auto">
+              Modern facility, sterilized environment, comfortable experience
+            </p>
+          </SectionItem>
+        </SectionContainer>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {galleryImages.map((img, i) => (
             <motion.button
               key={i}
-              initial={{ opacity: 0, scale: 0.95 }}
+              initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.08 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ delay: i * 0.08, duration: 0.5 }}
+              whileHover={{ scale: 1.03 }}
               onClick={() => setSelectedImg(i)}
               className="group relative rounded-xl overflow-hidden aspect-[4/3] cursor-pointer"
             >
@@ -54,7 +57,7 @@ const ClinicGallery = () => {
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-secondary/0 group-hover:bg-secondary/40 transition-colors duration-300 flex items-end">
-                <span className="text-primary-foreground text-sm font-semibold p-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span className="text-primary-foreground text-sm font-semibold p-3 opacity-0 group-hover:opacity-100 transition-opacity translate-y-2 group-hover:translate-y-0 duration-300">
                   {img.label}
                 </span>
               </div>
@@ -81,9 +84,11 @@ const ClinicGallery = () => {
               <X size={32} />
             </button>
             <motion.img
-              initial={{ scale: 0.9 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.9 }}
+              key={selectedImg}
+              initial={{ scale: 0.85, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.85, opacity: 0 }}
+              transition={{ duration: 0.3 }}
               src={galleryImages[selectedImg].src}
               alt={galleryImages[selectedImg].alt}
               className="max-w-full max-h-[85vh] rounded-xl object-contain"

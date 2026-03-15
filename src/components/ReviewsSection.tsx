@@ -1,28 +1,14 @@
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
+import { SectionContainer, SectionItem } from "./SectionReveal";
 
 const reviews = [
-  {
-    name: "Priya S.",
-    text: "Dr. Karthika is amazing! She made my root canal completely painless. The clinic is clean, modern, and the staff is so friendly. Highly recommend!",
-  },
-  {
-    name: "Raj M.",
-    text: "Best dental clinic in Pondicherry! Got my teeth whitening done here and the results are incredible. Very professional and affordable.",
-  },
-  {
-    name: "Anitha K.",
-    text: "My daughter was scared of dentists, but Dr. Karthika was so gentle and patient. Now she actually looks forward to check-ups!",
-  },
-  {
-    name: "Vikram R.",
-    text: "Transparent pricing, no hidden charges. Got my ceramic braces here and couldn't be happier with the treatment and care.",
-  },
-  {
-    name: "Lakshmi P.",
-    text: "Clean clinic, latest equipment, and Dr. Karthika explains everything clearly. Felt confident and comfortable throughout my treatment.",
-  },
+  { name: "Priya S.", text: "Dr. Karthika is amazing! She made my root canal completely painless. The clinic is clean, modern, and the staff is so friendly. Highly recommend!" },
+  { name: "Raj M.", text: "Best dental clinic in Pondicherry! Got my teeth whitening done here and the results are incredible. Very professional and affordable." },
+  { name: "Anitha K.", text: "My daughter was scared of dentists, but Dr. Karthika was so gentle and patient. Now she actually looks forward to check-ups!" },
+  { name: "Vikram R.", text: "Transparent pricing, no hidden charges. Got my ceramic braces here and couldn't be happier with the treatment and care." },
+  { name: "Lakshmi P.", text: "Clean clinic, latest equipment, and Dr. Karthika explains everything clearly. Felt confident and comfortable throughout my treatment." },
 ];
 
 const ReviewsSection = () => {
@@ -38,23 +24,24 @@ const ReviewsSection = () => {
   return (
     <section id="reviews" className="py-20 md:py-28 bg-background">
       <div className="container">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-14"
-        >
-          <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">Testimonials</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">What Our Patients Say</h2>
-          <div className="flex items-center justify-center gap-1 mb-2">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} className="text-yellow-400 fill-yellow-400" size={20} />
-            ))}
-          </div>
-          <p className="text-muted-foreground">Trusted by families across Pondicherry</p>
-        </motion.div>
+        <SectionContainer className="text-center mb-14">
+          <SectionItem>
+            <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">Testimonials</p>
+          </SectionItem>
+          <SectionItem>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">What Our Patients Say</h2>
+          </SectionItem>
+          <SectionItem>
+            <div className="flex items-center justify-center gap-1 mb-2">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="text-yellow-400 fill-yellow-400" size={20} />
+              ))}
+            </div>
+            <p className="text-muted-foreground">Trusted by families across Pondicherry</p>
+          </SectionItem>
+        </SectionContainer>
 
-        {/* Desktop: show 3 cards, Mobile: carousel */}
+        {/* Desktop */}
         <div className="hidden md:grid md:grid-cols-3 gap-6">
           {reviews.slice(0, 3).map((review, i) => (
             <ReviewCard key={i} review={review} index={i} />
@@ -69,24 +56,31 @@ const ReviewsSection = () => {
         {/* Mobile Carousel */}
         <div className="md:hidden">
           <div className="relative">
-            <div className="bg-card rounded-xl p-6 shadow-card border border-border">
-              <div className="flex gap-1 mb-3">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="text-yellow-400 fill-yellow-400" size={16} />
-                ))}
-              </div>
-              <p className="text-foreground mb-4 leading-relaxed">"{reviews[current].text}"</p>
-              <div className="flex items-center justify-between">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={current}
+                initial={{ opacity: 0, x: 40 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -40 }}
+                transition={{ duration: 0.35 }}
+                className="bg-card rounded-xl p-6 shadow-card border border-border"
+              >
+                <div className="flex gap-1 mb-3">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="text-yellow-400 fill-yellow-400" size={16} />
+                  ))}
+                </div>
+                <p className="text-foreground mb-4 leading-relaxed">"{reviews[current].text}"</p>
                 <div>
                   <p className="font-semibold text-foreground">{reviews[current].name}</p>
                   <p className="text-xs text-muted-foreground">Google Review</p>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </AnimatePresence>
             <div className="flex items-center justify-center gap-4 mt-6">
               <button
                 onClick={() => setCurrent((prev) => (prev - 1 + reviews.length) % reviews.length)}
-                className="p-2 rounded-full bg-accent hover:bg-primary/10 text-foreground"
+                className="p-2 rounded-full bg-accent hover:bg-primary/10 text-foreground transition-colors"
                 aria-label="Previous review"
               >
                 <ChevronLeft size={20} />
@@ -96,8 +90,8 @@ const ReviewsSection = () => {
                   <button
                     key={i}
                     onClick={() => setCurrent(i)}
-                    className={`w-2 h-2 rounded-full transition-colors ${
-                      i === current ? "bg-primary" : "bg-border"
+                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                      i === current ? "bg-primary w-6" : "bg-border"
                     }`}
                     aria-label={`Go to review ${i + 1}`}
                   />
@@ -105,7 +99,7 @@ const ReviewsSection = () => {
               </div>
               <button
                 onClick={() => setCurrent((prev) => (prev + 1) % reviews.length)}
-                className="p-2 rounded-full bg-accent hover:bg-primary/10 text-foreground"
+                className="p-2 rounded-full bg-accent hover:bg-primary/10 text-foreground transition-colors"
                 aria-label="Next review"
               >
                 <ChevronRight size={20} />
@@ -120,10 +114,11 @@ const ReviewsSection = () => {
 
 const ReviewCard = ({ review, index }: { review: typeof reviews[0]; index: number }) => (
   <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
+    initial={{ opacity: 0, y: 30, filter: "blur(4px)" }}
+    whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
     viewport={{ once: true }}
-    transition={{ delay: index * 0.1 }}
+    transition={{ delay: index * 0.1, duration: 0.5 }}
+    whileHover={{ y: -4 }}
     className="bg-card rounded-xl p-6 shadow-card border border-border hover:shadow-card-hover transition-shadow"
   >
     <div className="flex gap-1 mb-3">

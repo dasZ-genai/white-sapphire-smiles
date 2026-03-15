@@ -1,14 +1,26 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { Instagram, Facebook, MessageCircle, Mail } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-secondary text-secondary-foreground py-16">
+    <motion.footer
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="bg-secondary text-secondary-foreground py-16"
+    >
       <div className="container">
         <div className="grid md:grid-cols-3 gap-10">
           {/* Clinic Info */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+          >
             <div className="mb-4">
               <img src={logo} alt="White Sapphire Dental Clinic" className="h-16 w-auto" />
             </div>
@@ -16,10 +28,15 @@ const Footer = () => {
             <p className="text-secondary-foreground/50 text-sm leading-relaxed">
               Dr. Karthika's White Sapphire Dental Clinic — Pondicherry's trusted dental care provider.
             </p>
-          </div>
+          </motion.div>
 
           {/* Quick Links */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+          >
             <h3 className="font-heading font-bold text-base mb-4">Quick Links</h3>
             <nav className="flex flex-col gap-2">
               {[
@@ -34,7 +51,7 @@ const Footer = () => {
                   <Link
                     key={link.label}
                     to={link.href}
-                    className="text-secondary-foreground/60 hover:text-primary text-sm transition-colors"
+                    className="text-secondary-foreground/60 hover:text-primary text-sm transition-colors hover:translate-x-1 transform duration-200 inline-block"
                   >
                     {link.label}
                   </Link>
@@ -42,46 +59,42 @@ const Footer = () => {
                   <a
                     key={link.label}
                     href={link.href}
-                    className="text-secondary-foreground/60 hover:text-primary text-sm transition-colors"
+                    className="text-secondary-foreground/60 hover:text-primary text-sm transition-colors hover:translate-x-1 transform duration-200 inline-block"
                   >
                     {link.label}
                   </a>
                 )
               )}
             </nav>
-          </div>
+          </motion.div>
 
           {/* Social */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+          >
             <h3 className="font-heading font-bold text-base mb-4">Connect With Us</h3>
             <div className="flex gap-3 mb-4">
-              <a
-                href="https://www.instagram.com/whitesapphiredental"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-secondary-foreground/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram size={18} />
-              </a>
-              <a
-                href="https://www.facebook.com/profile.php?id=61577745755577"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-secondary-foreground/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook size={18} />
-              </a>
-              <a
-                href="https://wa.me/7598000829"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-secondary-foreground/10 flex items-center justify-center hover:bg-whatsapp hover:text-primary-foreground transition-colors"
-                aria-label="WhatsApp"
-              >
-                <MessageCircle size={18} />
-              </a>
+              {[
+                { href: "https://www.instagram.com/whitesapphiredental", icon: Instagram, label: "Instagram", hoverClass: "hover:bg-primary hover:text-primary-foreground" },
+                { href: "https://www.facebook.com/profile.php?id=61577745755577", icon: Facebook, label: "Facebook", hoverClass: "hover:bg-primary hover:text-primary-foreground" },
+                { href: "https://wa.me/7598000829", icon: MessageCircle, label: "WhatsApp", hoverClass: "hover:bg-whatsapp hover:text-primary-foreground" },
+              ].map((social) => (
+                <motion.a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.15, rotate: 5 }}
+                  whileTap={{ scale: 0.95 }}
+                  className={`w-10 h-10 rounded-full bg-secondary-foreground/10 flex items-center justify-center transition-colors ${social.hoverClass}`}
+                  aria-label={social.label}
+                >
+                  <social.icon size={18} />
+                </motion.a>
+              ))}
             </div>
             <a
               href="mailto:whitesapphiredentalclinic@gmail.com"
@@ -90,16 +103,22 @@ const Footer = () => {
               <Mail size={16} />
               whitesapphiredentalclinic@gmail.com
             </a>
-          </div>
+          </motion.div>
         </div>
 
-        <div className="border-t border-secondary-foreground/10 mt-10 pt-6 text-center">
+        <motion.div
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="border-t border-secondary-foreground/10 mt-10 pt-6 text-center origin-left"
+        >
           <p className="text-secondary-foreground/40 text-sm">
             © {new Date().getFullYear()} White Sapphire Dental Clinic. All Rights Reserved.
           </p>
-        </div>
+        </motion.div>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 

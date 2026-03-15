@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { SectionContainer, SectionItem } from "./SectionReveal";
 import ba1 from "@/assets/before-after-1.jpg";
 import ba2 from "@/assets/before-after-2.png";
 import ba3 from "@/assets/before-after-3.png";
@@ -22,29 +23,31 @@ const BeforeAfterSection = () => {
   return (
     <section className="py-20 md:py-28 bg-secondary">
       <div className="container">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-14"
-        >
-          <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">Real Results</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-secondary-foreground mb-4">
-            Smile Transformations ✨
-          </h2>
-          <p className="text-secondary-foreground/60 max-w-lg mx-auto">
-            Real patients, real results — see the difference expert dental care makes
-          </p>
-        </motion.div>
+        <SectionContainer className="text-center mb-14">
+          <SectionItem>
+            <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">Real Results</p>
+          </SectionItem>
+          <SectionItem>
+            <h2 className="text-3xl md:text-4xl font-bold text-secondary-foreground mb-4">
+              Smile Transformations ✨
+            </h2>
+          </SectionItem>
+          <SectionItem>
+            <p className="text-secondary-foreground/60 max-w-lg mx-auto">
+              Real patients, real results — see the difference expert dental care makes
+            </p>
+          </SectionItem>
+        </SectionContainer>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {transformations.map((item, i) => (
             <motion.button
               key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, scale: 0.9, rotate: -1 }}
+              whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
+              transition={{ delay: i * 0.12, duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+              whileHover={{ scale: 1.03, y: -4 }}
               onClick={() => setSelectedImg(i)}
               className="group relative rounded-xl overflow-hidden cursor-pointer bg-background/5"
             >
@@ -72,32 +75,21 @@ const BeforeAfterSection = () => {
             className="fixed inset-0 z-50 bg-secondary/95 flex items-center justify-center p-4"
             onClick={() => setSelectedImg(null)}
           >
-            <button
-              onClick={() => setSelectedImg(null)}
-              className="absolute top-6 right-6 text-secondary-foreground/70 hover:text-secondary-foreground"
-              aria-label="Close"
-            >
+            <button onClick={() => setSelectedImg(null)} className="absolute top-6 right-6 text-secondary-foreground/70 hover:text-secondary-foreground" aria-label="Close">
               <X size={32} />
             </button>
-            <button
-              onClick={(e) => { e.stopPropagation(); navigate(-1); }}
-              className="absolute left-4 md:left-8 text-secondary-foreground/70 hover:text-secondary-foreground"
-              aria-label="Previous"
-            >
+            <button onClick={(e) => { e.stopPropagation(); navigate(-1); }} className="absolute left-4 md:left-8 text-secondary-foreground/70 hover:text-secondary-foreground" aria-label="Previous">
               <ChevronLeft size={36} />
             </button>
-            <button
-              onClick={(e) => { e.stopPropagation(); navigate(1); }}
-              className="absolute right-4 md:right-8 text-secondary-foreground/70 hover:text-secondary-foreground"
-              aria-label="Next"
-            >
+            <button onClick={(e) => { e.stopPropagation(); navigate(1); }} className="absolute right-4 md:right-8 text-secondary-foreground/70 hover:text-secondary-foreground" aria-label="Next">
               <ChevronRight size={36} />
             </button>
             <motion.img
               key={selectedImg}
-              initial={{ scale: 0.9, opacity: 0 }}
+              initial={{ scale: 0.85, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
+              exit={{ scale: 0.85, opacity: 0 }}
+              transition={{ duration: 0.3 }}
               src={transformations[selectedImg].src}
               alt={transformations[selectedImg].alt}
               className="max-w-full max-h-[85vh] rounded-xl object-contain"
