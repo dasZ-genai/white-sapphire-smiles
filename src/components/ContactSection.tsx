@@ -26,7 +26,7 @@ const ContactSection = () => {
             className="rounded-xl overflow-hidden shadow-card h-[400px]"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.5!2d79.8234!3d11.9234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5361ab8e49cfcf%3A0x29e4c1c5e530cbe6!2sDr.Karthika&#39;s%20White%20Sapphire%20Dental%20Clinic!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3903.5!2d79.8234!3d11.9234!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5361c7a41753d5%3A0xd9b3e72e0e1f3b8a!2sDr.Karthika&#39;s+White+Sapphire+Dental+Clinic!5e0!3m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}
