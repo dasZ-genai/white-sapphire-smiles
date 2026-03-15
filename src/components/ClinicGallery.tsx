@@ -29,7 +29,7 @@ const ClinicGallery = () => {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">Our Space</p>
+          <p className="text-copper font-semibold text-sm uppercase tracking-wider mb-2">Our Space</p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Clinic</h2>
           <p className="text-muted-foreground max-w-lg mx-auto">
             Modern facility, sterilized environment, comfortable experience

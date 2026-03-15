@@ -34,7 +34,7 @@ const Footer = () => {
                   <Link
                     key={link.label}
                     to={link.href}
-                    className="text-secondary-foreground/60 hover:text-primary text-sm transition-colors"
+                    className="text-secondary-foreground/60 hover:text-copper text-sm transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -42,7 +42,7 @@ const Footer = () => {
                   <a
                     key={link.label}
                     href={link.href}
-                    className="text-secondary-foreground/60 hover:text-primary text-sm transition-colors"
+                    className="text-secondary-foreground/60 hover:text-copper text-sm transition-colors"
                   >
                     {link.label}
                   </a>
@@ -59,7 +59,7 @@ const Footer = () => {
                 href="https://www.instagram.com/whitesapphiredental"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-secondary-foreground/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+                className="w-10 h-10 rounded-full bg-secondary-foreground/10 flex items-center justify-center hover:bg-copper hover:text-primary-foreground transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram size={18} />
@@ -68,7 +68,7 @@ const Footer = () => {
                 href="https://www.facebook.com/profile.php?id=61577745755577"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-secondary-foreground/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+                className="w-10 h-10 rounded-full bg-secondary-foreground/10 flex items-center justify-center hover:bg-copper hover:text-primary-foreground transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook size={18} />
@@ -85,7 +85,7 @@ const Footer = () => {
             </div>
             <a
               href="mailto:whitesapphiredentalclinic@gmail.com"
-              className="flex items-center gap-2 text-secondary-foreground/60 hover:text-primary text-sm transition-colors"
+              className="flex items-center gap-2 text-secondary-foreground/60 hover:text-copper text-sm transition-colors"
             >
               <Mail size={16} />
               whitesapphiredentalclinic@gmail.com
