@@ -37,7 +37,7 @@ const HeroSection = () => {
           <p className="text-primary-foreground/50 text-lg mb-4">
             Modern treatments • Pain-free procedures • Gentle approach
           </p>
-          <a href="tel:+917598000829" className="inline-flex items-center gap-2 text-cyan-glow font-semibold text-lg mb-8 hover:underline">
+          <a href="tel:+917598000829" className="inline-flex items-center gap-2 text-cyan-glow font-semibold text-xl mb-8 hover:underline">
             <Phone size={20} />
             +91 7598 000 829
           </a>
