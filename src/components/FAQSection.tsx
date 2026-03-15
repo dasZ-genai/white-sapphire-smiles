@@ -51,7 +51,7 @@ const FAQSection = () => {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <p className="text-copper font-semibold text-sm uppercase tracking-wider mb-2">FAQ</p>
+          <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">FAQ</p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Your Questions Answered</h2>
           <p className="text-muted-foreground">Common dental questions from our Pondicherry patients</p>
         </motion.div>
@@ -68,7 +68,7 @@ const FAQSection = () => {
                 value={`faq-${i}`}
                 className="bg-card rounded-xl border border-border px-6 shadow-card"
               >
-                <AccordionTrigger className="text-left font-semibold text-foreground hover:text-copper hover:no-underline py-5">
+                <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary hover:no-underline py-5">
                   {faq.q}
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground leading-relaxed pb-5">

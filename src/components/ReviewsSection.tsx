@@ -44,11 +44,11 @@ const ReviewsSection = () => {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <p className="text-copper font-semibold text-sm uppercase tracking-wider mb-2">Testimonials</p>
+          <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">Testimonials</p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">What Our Patients Say</h2>
           <div className="flex items-center justify-center gap-1 mb-2">
             {[...Array(5)].map((_, i) => (
-              <Star key={i} className="text-gold fill-gold" size={20} />
+              <Star key={i} className="text-yellow-400 fill-yellow-400" size={20} />
             ))}
           </div>
           <p className="text-muted-foreground">Trusted by families across Pondicherry</p>
@@ -72,7 +72,7 @@ const ReviewsSection = () => {
             <div className="bg-card rounded-xl p-6 shadow-card border border-border">
               <div className="flex gap-1 mb-3">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="text-gold fill-gold" size={16} />
+                  <Star key={i} className="text-yellow-400 fill-yellow-400" size={16} />
                 ))}
               </div>
               <p className="text-foreground mb-4 leading-relaxed">"{reviews[current].text}"</p>
@@ -86,7 +86,7 @@ const ReviewsSection = () => {
             <div className="flex items-center justify-center gap-4 mt-6">
               <button
                 onClick={() => setCurrent((prev) => (prev - 1 + reviews.length) % reviews.length)}
-                className="p-2 rounded-full bg-accent hover:bg-copper/10 text-foreground"
+                className="p-2 rounded-full bg-accent hover:bg-primary/10 text-foreground"
                 aria-label="Previous review"
               >
                 <ChevronLeft size={20} />
@@ -97,7 +97,7 @@ const ReviewsSection = () => {
                     key={i}
                     onClick={() => setCurrent(i)}
                     className={`w-2 h-2 rounded-full transition-colors ${
-                      i === current ? "bg-copper" : "bg-border"
+                      i === current ? "bg-primary" : "bg-border"
                     }`}
                     aria-label={`Go to review ${i + 1}`}
                   />
@@ -105,7 +105,7 @@ const ReviewsSection = () => {
               </div>
               <button
                 onClick={() => setCurrent((prev) => (prev + 1) % reviews.length)}
-                className="p-2 rounded-full bg-accent hover:bg-copper/10 text-foreground"
+                className="p-2 rounded-full bg-accent hover:bg-primary/10 text-foreground"
                 aria-label="Next review"
               >
                 <ChevronRight size={20} />
@@ -128,7 +128,7 @@ const ReviewCard = ({ review, index }: { review: typeof reviews[0]; index: numbe
   >
     <div className="flex gap-1 mb-3">
       {[...Array(5)].map((_, i) => (
-        <Star key={i} className="text-gold fill-gold" size={16} />
+        <Star key={i} className="text-yellow-400 fill-yellow-400" size={16} />
       ))}
     </div>
     <p className="text-foreground mb-4 leading-relaxed text-sm">"{review.text}"</p>

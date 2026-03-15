@@ -31,7 +31,7 @@ const AboutSection = () => {
                 loading="lazy"
               />
             </div>
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-copper rounded-2xl -z-10" />
+            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary rounded-2xl -z-10" />
           </motion.div>
 
           {/* Content */}
@@ -41,7 +41,7 @@ const AboutSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-copper font-semibold text-sm uppercase tracking-wider mb-2">About the Doctor</p>
+            <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">About the Doctor</p>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               Meet Dr. Karthika
             </h2>
@@ -58,7 +58,7 @@ const AboutSection = () => {
                   key={cred.label}
                   className="flex items-center gap-2 bg-accent rounded-lg px-3 py-2.5"
                 >
-                  <cred.icon className="text-copper shrink-0" size={18} />
+                  <cred.icon className="text-primary shrink-0" size={18} />
                   <span className="text-sm font-medium text-foreground">{cred.label}</span>
                 </div>
               ))}

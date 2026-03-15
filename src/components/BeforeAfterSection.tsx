@@ -28,7 +28,7 @@ const BeforeAfterSection = () => {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <p className="text-copper font-semibold text-sm uppercase tracking-wider mb-2">Real Results</p>
+          <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">Real Results</p>
           <h2 className="text-3xl md:text-4xl font-bold text-secondary-foreground mb-4">
             Smile Transformations ✨
           </h2>
@@ -55,7 +55,7 @@ const BeforeAfterSection = () => {
                 loading="lazy"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-secondary/90 to-transparent p-4">
-                <span className="text-copper font-semibold text-sm">{item.label}</span>
+                <span className="text-primary font-semibold text-sm">{item.label}</span>
               </div>
             </motion.button>
           ))}

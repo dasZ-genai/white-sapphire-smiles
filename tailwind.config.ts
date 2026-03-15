@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['"Playfair Display"', 'Georgia', 'serif'],
+        heading: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
         body: ['"DM Sans"', 'system-ui', 'sans-serif'],
       },
       colors: {
@@ -51,11 +51,11 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        indigo: "hsl(var(--indigo))",
-        "indigo-light": "hsl(var(--indigo-light))",
-        copper: "hsl(var(--copper))",
-        "copper-light": "hsl(var(--copper-light))",
-        gold: "hsl(var(--gold))",
+        navy: "hsl(var(--navy))",
+        "navy-light": "hsl(var(--navy-light))",
+        cyan: "hsl(var(--primary))",
+        "cyan-glow": "hsl(var(--cyan-glow))",
+        silver: "hsl(var(--silver))",
         whatsapp: "hsl(142 70% 45%)",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
