@@ -89,8 +89,10 @@ const ContactSection = () => {
               <div>
                 <h3 className="font-semibold text-foreground mb-1">Clinic Hours</h3>
                 <p className="text-muted-foreground text-sm">
-                  Monday - Saturday: 9:00 AM - 8:00 PM<br />
-                  Sunday: 10:00 AM - 2:00 PM
+                  Monday - Saturday<br />
+                  Morning: 10:00 AM - 1:30 PM<br />
+                  Evening: 5:00 PM - 9:00 PM<br />
+                  Sunday: By Appointment Only
                 </p>
               </div>
             </div>

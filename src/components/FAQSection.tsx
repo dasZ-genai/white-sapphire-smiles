@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: "What are your clinic hours?",
-    a: "Monday-Saturday: 9:00 AM - 8:00 PM | Sunday: 10:00 AM - 2:00 PM. We're conveniently located in Mudaliyarpet, Pondicherry.",
+    a: "Monday to Saturday — Morning: 10:00 AM - 1:30 PM, Evening: 5:00 PM - 9:00 PM. Sunday: By Appointment Only. We're conveniently located in Mudaliyarpet, Pondicherry.",
   },
   {
     q: "How long does teeth whitening last?",
