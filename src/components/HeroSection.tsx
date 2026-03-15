@@ -31,7 +31,7 @@ const HeroSection = () => {
             Your Smile,{" "}
             <span className="text-gradient">Our Priority</span>
           </h1>
-          <p className="text-primary-foreground/70 text-lg md:text-xl mb-4 max-w-xl">
+          <p className="text-primary-foreground/70 text-xl md:text-2xl mb-4 max-w-xl">
             Expert dental care with <strong className="text-primary-foreground">Dr. Karthika BDS</strong>, Root Canal Specialist (C.C)
           </p>
           <p className="text-primary-foreground/50 text-base mb-4">
