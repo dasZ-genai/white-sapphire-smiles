@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Stethoscope, Sparkles, SmilePlus, Hospital, Wrench, Baby } from "lucide-react";
+import servicesBanner from "@/assets/services-banner.png";
 
 const services = [
   {
