@@ -4,7 +4,7 @@ import { SectionContainer, SectionItem } from "./SectionReveal";
 import servicesBanner from "@/assets/services-banner.png";
 
 const services = [
-  { icon: Stethoscope, title: "General Dentistry", description: "Routine check-ups, cleanings, scaling, cavity fillings, and extractions for complete oral health." },
+  { icon: Stethoscope, title: "General Dentistry", description: "Routine check-ups, scaling, cavity fillings, and fluoride application for complete oral health." },
   { icon: Sparkles, title: "Cosmetic Dentistry", description: "Teeth whitening, smile makeovers, veneers, and bonding for a brighter, confident smile." },
   { icon: SmilePlus, title: "Orthodontics", description: "Braces (ceramic & metal), aligners, and bite correction for perfectly aligned teeth." },
   { icon: Hospital, title: "Root Canal Treatment", description: "Pain-free RCT, endodontic care, and tooth preservation with specialist expertise." },

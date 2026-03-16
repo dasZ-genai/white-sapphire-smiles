@@ -12,7 +12,7 @@ const faqs = [
   { q: "How much does dental treatment cost in Pondicherry?", a: "Treatment costs vary by procedure. Routine cleanings start from ₹500, fillings from ₹800, teeth whitening from ₹3,000, and root canal treatment from ₹3,000-8,000. We offer transparent pricing with no hidden charges." },
   { q: "Do you accept walk-in patients?", a: "Yes, walk-ins are welcome! However, we recommend booking via WhatsApp (7598-000-829) to minimize waiting time and ensure Dr. Karthika's availability." },
   { q: "What are your clinic hours?", a: "Monday to Saturday — Morning: 10:00 AM - 1:30 PM, Evening: 5:00 PM - 9:00 PM. Sunday: By Appointment Only. We're conveniently located in Mudaliyarpet, Pondicherry." },
-  { q: "How long does teeth whitening last?", a: "Professional teeth whitening typically lasts 6-12 months with proper care. Avoiding staining foods (coffee, tea, wine) and maintaining good oral hygiene helps extend results." },
+  
   { q: "Are braces painful?", a: "There may be slight discomfort for the first few days after braces are fitted or adjusted, but it's manageable. Dr. Karthika's gentle approach makes the orthodontic journey comfortable for all ages." },
   { q: "What should I do in a dental emergency?", a: "Call or WhatsApp us immediately at 7598-000-829. For severe pain, swelling, knocked-out tooth, or dental trauma, we provide same-day emergency appointments." },
   { q: "Is White Sapphire Dental Clinic safe and hygienic?", a: "Absolutely. We follow strict sterilization protocols, use modern equipment, and maintain international hygiene standards. Your safety is our top priority." },
