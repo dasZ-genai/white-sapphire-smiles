@@ -35,7 +35,10 @@ const Navbar = () => {
     if (href.startsWith("/#")) {
       const id = href.replace("/#", "");
       if (location.pathname === "/") {
-        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+        // Delay scroll so mobile menu close animation completes
+        setTimeout(() => {
+          document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+        }, 350);
       } else {
         window.location.href = href;
       }
