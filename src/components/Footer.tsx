@@ -116,6 +116,9 @@ const Footer = () => {
           <p className="text-secondary-foreground/40 text-sm">
             © {new Date().getFullYear()} White Sapphire Dental Clinic. All Rights Reserved.
           </p>
+          <p className="text-secondary-foreground/30 text-xs mt-2">
+            Designed & Developed by <span className="font-semibold text-secondary-foreground/50">PRIYAM ENTERPRISES</span>
+          </p>
         </motion.div>
       </div>
     </motion.footer>
